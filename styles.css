@@ -1,0 +1,124 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: rgb(209, 209, 255);
+    
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.header {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    background-color: rgb(230, 230, 253);
+    justify-content: center;
+
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.form-popup {
+    position: absolute;
+    margin: auto;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 375px;
+    background-color: rgb(230, 230, 253);
+    border-radius: 8px;
+    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+form h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.form-popup input[type=text],
+.form-popup input[type=number] {
+    height: 42px;
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: rgb(220, 220, 255);
+    font-size: 22px;
+    padding-left: 12px;
+}
+
+
+
+input[type=checkbox]{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-popup div label {
+    font-size: 20px;
+}
+
+.popup-container {
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, .2);
+    height: 100%;
+    width: 100%;
+}
+
+#form-button {
+    cursor: pointer;
+    width: 100%;
+    font-size: 24px;
+    
+    background-color: rgb(167, 167, 255);
+    border: none;
+    height: 48px;
+    border-radius: 8px;
+    
+}
+
+#form-button:hover {
+    transition: .1s;
+    background-color: rgb(153, 153, 250);;
+}
+
+#form-button:active{
+    transform: scale(.96);
+}

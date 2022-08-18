@@ -5,10 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Adam Library App</title>
 </head>
 <body>
+    <div class="header">
+        <h1>Library</h1>
+    </div>
+    <button class="new-book-btn">+ ADD BOOK</button>
     
+    <div class="popup-container">
+        <div class="form-popup">
+            
+            <form class="form">
+                <h2>Add new book</h2>
+                <input type="text" id="title" placeholder="Title"  name="title" required minlength="2">
+                <input type="text" id="author" placeholder="Author"  name="author" required>
+                <input type="number" id="pages" placeholder="Pages"  name="pages" min="0" max="9999" required >
+                <div class="checkbox-container">
+                    <label for="haveRead">Have you read it?</label>
+                    <input type="checkbox" name="haveRead" id="haveRead">
+                </div>
+                <button type="submit" id="form-button">Add book</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="library-container">
+
+    </div>
 </body>
 </html>
