@@ -8,6 +8,8 @@
 :root {
     --main-color: rgb(209, 209, 255);
     --secondary-color: rgb(230, 230, 253);
+    --read-color: rgb(144, 255, 130);
+    --not-read-color: rgb(255, 93, 93);
 }
 
 body {
@@ -126,6 +128,7 @@ input[type=checkbox]{
     background-color: rgba(0, 0, 0, .2);
     height: 100%;
     width: 100%;
+    z-index: 10;
 }
 
 #form-button {
@@ -153,7 +156,7 @@ input[type=checkbox]{
 
 .card-item {
     background-color: var(--secondary-color);
-    
+    position: relative;
     height: 275px;
     border-radius: 12px;
     display: flex;
@@ -163,8 +166,29 @@ input[type=checkbox]{
     gap: 24px;
     padding: 24px;
     font-weight: 500;
+    transition: .75s;
+
+    box-shadow: rgba(93, 93, 194, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.delete-icon {
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    cursor: pointer;
     
 }
+
+.delete-icon:hover{
+    transform: scale(1.1);
+    filter: invert(70%) sepia(89%) saturate(6579%) hue-rotate(337deg) brightness(122%) contrast(114%); ;
+}
+
+
+
+
 
 .card-item button{
     width: 100%;
@@ -175,6 +199,7 @@ input[type=checkbox]{
     border: none;
     flex-grow: 1;
     cursor: pointer;
+    background-color: var(--not-read-color);
 }
 
 .card-item p {
@@ -182,6 +207,18 @@ input[type=checkbox]{
     margin: 0;
     flex-grow: 1;
 }
+
+.card-item:hover {
+    
+    transform: scale(1.03);
+}
+
+.have-read {
+    background-color: var(--read-color) !important;
+}
+
+
+
 
 .library-container {
     width: 65%;
