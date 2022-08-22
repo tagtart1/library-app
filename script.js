@@ -17,16 +17,19 @@ Book.prototype.toggleRead = function() {
 
 
 const addBookToLibrary = (e) => {
-    
+    //stops webpage from refreshing when submitting
     e.preventDefault();
     const newBook = getBookFromInput();
 
     myLibrary.push(newBook);
+    //create DOM book card
     addAndDisplayBook(newBook);
+    //empties form upon submission
     resetAndCloseForm();
     
 }
 
+//create DOM book card
 function addAndDisplayBook(newBook) {
         
     const libContainer = document.querySelector('.library-container');
@@ -75,6 +78,7 @@ function getBookFromInput() {
     return new Book( authorValue, titleValue, pagesValue, isReadValue);
 }
 
+//Changes read property and CSS classes
 function toggleBtnRead(e) {
     myLibrary[e.target.parentElement.getAttribute('data-index')].toggleRead();
     e.target.textContent = myLibrary[e.target.parentElement.getAttribute('data-index')].isRead ? 'Read' : "Not read";
@@ -117,6 +121,7 @@ newBookBtn.addEventListener('click', () => {
     
 });
 
+//Clicking anywhere but the form closes it
 window.onclick = function (e) {
     const popup = document.querySelector('.popup-container');
     if (e.target == popup) {
