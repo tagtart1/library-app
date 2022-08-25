@@ -130,10 +130,7 @@ class Library {
 
 
 const library = new Library();
-
 library.form.onsubmit = library.addBookToLibrary;
-
-
 
 //Clicking anywhere but the form closes it
 window.onclick = function (e) {
