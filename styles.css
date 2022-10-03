@@ -1,230 +1,217 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
-    --main-color: rgb(209, 209, 255);
-    --secondary-color: rgb(230, 230, 253);
-    --read-color: rgb(144, 255, 130);
-    --not-read-color: rgb(255, 93, 93);
+  --main-color: rgb(209, 209, 255);
+  --secondary-color: rgb(230, 230, 253);
+  --read-color: rgb(144, 255, 130);
+  --not-read-color: rgb(255, 93, 93);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: var(--main-color);
-    
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--main-color);
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .header {
-    width: 100%;
-    padding: 24px;
-    display: flex;
-    background-color: var(--secondary-color);
-    justify-content: center;
-
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  background-color: var(--secondary-color);
+  justify-content: center;
 }
 
 .header h1 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
-
 .form-popup {
-    position: absolute;
-    margin: auto;
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    height: 375px;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 375px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: center;
 }
 
 form h2 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.form-popup input[type=text],
-.form-popup input[type=number] {
-    height: 42px;
-    width: 100%;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-    background-color: rgb(220, 220, 255);
-    font-size: 22px;
-    padding-left: 12px;
+.form-popup input[type="text"],
+.form-popup input[type="number"] {
+  height: 42px;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background-color: rgb(220, 220, 255);
+  font-size: 22px;
+  padding-left: 12px;
 }
 
-
-
-input[type=checkbox]{
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
+input[type="checkbox"] {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
 }
 
-.checkbox-container{
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .new-book-btn {
-    padding: 12px 36px;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: rgb(209, 209, 255);
-    border: 2px solid rgb(57, 57, 82); 
-    border-radius: 12px;
-    transition: .2s;
-    cursor: pointer;
+  padding: 12px 36px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(209, 209, 255);
+  border: 2px solid rgb(57, 57, 82);
+  border-radius: 12px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .new-book-btn:hover {
-    
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .new-book-btn:active {
-    background-color: rgb(57, 57, 82);
-    color: rgb(209, 209, 255);
+  background-color: rgb(57, 57, 82);
+  color: rgb(209, 209, 255);
 }
 
 .form-popup div label {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .popup-container {
-    position: fixed;
-    display: none;
-    background-color: rgba(0, 0, 0, .2);
-    height: 100%;
-    width: 100%;
-    z-index: 10;
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
 }
 
 #form-button {
-    cursor: pointer;
-    width: 100%;
-    font-size: 24px;
-    
-    background-color: rgb(167, 167, 255);
-    border: none;
-    height: 48px;
-    border-radius: 8px;
-    
+  cursor: pointer;
+  width: 100%;
+  font-size: 24px;
+
+  background-color: rgb(167, 167, 255);
+  border: none;
+  height: 48px;
+  border-radius: 8px;
 }
 
 #form-button:hover {
-    transition: .1s;
-    background-color: rgb(153, 153, 250);;
+  transition: 0.1s;
+  background-color: rgb(153, 153, 250);
 }
 
-#form-button:active{
-    transform: scale(.96);
+#form-button:active {
+  transform: scale(0.96);
 }
 
 /* Card Selectors */
 
 .card-item {
-    background-color: var(--secondary-color);
-    position: relative;
-    height: 275px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    gap: 24px;
-    padding: 24px;
-    font-weight: 500;
-    transition: .75s;
+  background-color: var(--secondary-color);
+  position: relative;
+  height: 275px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  gap: 24px;
+  padding: 24px;
+  font-weight: 500;
+  transition: 0.75s;
 
-    box-shadow: rgba(93, 93, 194, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(93, 93, 194, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .delete-icon {
-    height: 28px;
-    width: 28px;
-    position: absolute;
-    right: 10px;
-    top: 22px;
-    cursor: pointer;
-    
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  right: 10px;
+  top: 22px;
+  cursor: pointer;
 }
 
-.delete-icon:hover{
-    transform: scale(1.1);
-    filter: invert(70%) sepia(89%) saturate(6579%) hue-rotate(337deg) brightness(122%) contrast(114%); ;
+.delete-icon:hover {
+  transform: scale(1.1);
+  filter: invert(70%) sepia(89%) saturate(6579%) hue-rotate(337deg)
+    brightness(122%) contrast(114%);
 }
 
-
-
-
-
-.card-item button{
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 12px;
-    border: none;
-    flex-grow: 1;
-    cursor: pointer;
-    background-color: var(--not-read-color);
+.card-item button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--not-read-color);
 }
 
 .card-item p {
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
 }
 
 .card-item:hover {
-    
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .have-read {
-    background-color: var(--read-color) !important;
+  background-color: var(--read-color) !important;
 }
 
-
-
-
 .library-container {
-    width: 65%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 36px;
-    
+  width: 65%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 36px;
+}
+
+.error {
+  border: 1px solid red !important;
 }
